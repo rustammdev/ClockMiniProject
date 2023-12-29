@@ -3,16 +3,30 @@ let hour = date.getHours()
 let min = date.getMinutes()
 let sek = date.getSeconds()
 
+let dayIndex = date.getDay() // week number 
+let dd = date.getDate()
+let yr = date.getFullYear()
+
+let mth = date.getMonth()
+let months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+const weekName = ['SUN', 'Mon', 'TUE', 'WEN', 'THU', 'FRI', 'SAT']
+
+
 
 let hourInterval = hour
 let minInterval  = min
 let sekInterval  = sek
 
-// 1. Ayni vaqtdagi vaqtni olib, uni live o'zgartirish [ complate ]
-// 2. hour, min, sek 59 dan keyin 00 ga o'zgarish      [ complate ]
-// 3. 59 dan keyin hour, min, sek, +1 ga o'shishi      [ complate ]
-// 4. 0 - 1 -> 01, 02   [ complate ]
+/*    day     */
+const day = document.querySelector('#day')
+const month = document.querySelector('#month')
+const year = document.querySelector('#year')
+const week = document.querySelector('#week')
 
+day.textContent = dd
+month.textContent = months[mth] 
+year.textContent = yr
+week.textContent = weekName[dayIndex]
 
 /*   change the regional clock    PM - 12, AM - 24*/
 const regText = document.querySelector('#digit')
@@ -33,7 +47,6 @@ regClock.addEventListener("click",() => {
         digit.textContent = 'AM' 
         hourInterval += 12
     }
-    console.log(am_pm);
 })
 
 
@@ -68,13 +81,9 @@ setInterval(() => {
     hourEl.textContent = prependZero(hourInterval)
     minEl.textContent  = prependZero(minInterval)
     sekInterval++
-    // sekEl.textContent  = prependZero(sekInterval++)
     
-}, 1000)
-
-
-const dotToggle = document.querySelector('#tog')
-setInterval(() => {
+    const dotToggle = document.querySelector('#tog')
     dotToggle.classList.toggle('tog')
-}, 1000);
+
+}, 1000)
 
