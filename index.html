@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
     <title>Clock</title>
-    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     
     <div>
-        <h2 class="title">Digitil Clock</h2>
+        <h2 class="title">Digital Clock</h2>
         <div class="wrapper">
             <span class="digit" id="digit"></span>
             <div class="hour" id="hour">00</div>
@@ -29,6 +29,35 @@
         <button class="btn" id="btn">Change the regional time</button>
     </div>
 
-    <script src="app.js"></script>
+    <div class="rounded">
+        <h2 class="title">Rounded Clock</h2>
+        <div class="round">
+            <div class="dot2">
+                <div class="arrow sekArrow" id="sekArrow"></div>
+                <div class="arrow minArrow" id="minArrow"></div>
+                <div class="arrow hourArrow" id="hourArrow"></div>
+                <!-- <div class="round1"></div> -->
+                <h1 class="oahfeo">
+                    <span class="char12"><small class='nn12'>12</small></span>
+                    <span class="char1"><small class='nn'>1</small></span>
+                    <span class="char2"><small class='nn2'>2</small></span>
+                    <span class="char3"><small class='nn3'>3</small></span>
+                    <span class="char4"><small class='nn4'>4</small></span>
+                    <span class="char5"><small class='nn5'>5</small></span>
+                    <span class="char6"><small class='nn6'>6</small></span>
+                    <span class="char7"><small class='nn7'>7</small></span>
+                    <span class="char8"><small class='nn8'>8</small></span>
+                    <span class="char9"><small class='nn9'>9</small></span>
+                    <span class="char10"><small class='nn10'>10</small></span>
+                    <span class="char11"><small class='nn11'>11</small></span>
+                </h1>
+
+                <h1 id="sekArr"></h1>
+                
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
 </body>
 </html>

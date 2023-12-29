@@ -1,0 +1,243 @@
+@import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;800;900&display=swap);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    color: #181A1B;
+    user-select: none;
+    /* border: 1px solid red; */
+}
+
+body {
+    background-color: #181A1B;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+/* ---- Digitil clock ---- */
+.title {
+    color: white;
+    text-align: center;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.wrapper {
+    width: 220px;
+    height: 80px;
+    display: flex; /*mediada flexni o'chir*/
+    border: 1px solid white;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    position: relative;
+}
+
+.wrapper .hour, .min {
+    font-size: 48px;
+    color: white;
+}
+
+.hour {
+    padding-top: 14px;
+    padding-bottom: 14px;
+    padding-left: 16px;
+    padding-right: 12px;
+}
+.min {
+    padding-top: 14px;
+    padding-bottom: 14px;
+    padding-left: 12px;
+    padding-right: 16px;
+}
+
+.tog {
+    color: white;
+    font-size: 32px
+}
+
+#tog{
+    width: 10px;
+    text-align: center;
+}
+
+.digit {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 12px 16px;
+    color: white;
+    font-size: 8px;
+}
+
+.btn {
+    margin-top: 10px;
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+    border: 1px solid white;
+    background-color: #181A1B;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    padding: 8px 0px;
+    border-radius: 4px;
+    transition: all 0.3s;
+}
+
+.btn:hover {
+    /* color: #27B1DF; */
+    box-shadow: -3px 2px 25px 2px rgba(39, 177, 223, 0.2);
+}
+
+.section-2 {
+    margin-top: 5px;
+    display: flex;
+    height: 50px;
+    justify-content: space-around;
+    align-items: center;
+    border: 1px solid white;
+    position: relative;
+}
+
+.section-2-mini {
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.day, .month, .year, .week {
+    color: white;
+}
+
+.week {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    padding-left: 12px;
+    height: 100%;
+    border-left: 1px solid white;
+}
+/* ---- Digitil clock end ---- */
+
+
+/* -----   Rounded clock   ----- */
+.round {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    border: 1px solid white;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.dot2 {
+    position: fixed;
+}
+
+.arrow {
+    position: fixed;
+    transform-origin: 0%;
+    border-radius: 0px 5px 5px 0px;
+}
+
+.round1 {
+    position: fixed;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    top: 1px;
+    background-color: white;
+}
+
+.sekArrow {
+    border: 1px solid red;
+    width: 115px;
+    height: 0px;
+}
+
+.minArrow {
+    border: 1px solid rgb(5, 134, 239);
+    background-color: rgb(5, 134, 239);;
+    width: 105px;
+    height: 1px;
+}
+
+.hourArrow {
+    border: 1px solid rgb(255, 255, 255);
+    background-color: rgb(255, 255, 255);
+    width: 100px;
+    height: 1px;
+    transform: rotate(90deg);
+}
+
+
+/* clock numbers */
+.oahfeo span {
+    position: fixed;
+    font: 16px Monaco, MonoSpace;
+    height: 118px;
+    position: absolute;
+    top: -122px;
+    transform-origin: bottom center;
+    color: white;
+    margin-top: 4px;
+    border: 1px solid red;
+}
+
+
+
+.char12 { transform: rotate(0deg); }
+.char1 { transform: rotate(30deg); }
+.char2 { transform: rotate(60deg); }
+.char3 { transform: rotate(90deg); }
+.char4 { transform: rotate(120deg); }
+.char5 { transform: rotate(150deg); }
+.char6 { transform: rotate(180deg); }
+.char7 { transform: rotate(210deg); }
+.char8 { transform: rotate(240deg); }
+.char9 { transform: rotate(270deg); }
+.char10 { transform: rotate(300deg); }
+.char11 { transform: rotate(330deg); }
+
+h1 span small {
+    color: white;
+    position: inherit;
+}
+
+.char1 .nn { transform: rotate(-30deg); margin-left: -3px; }
+.char2 .nn2 { transform: rotate(-60deg); margin-left: -3px;}
+.char3 .nn3 { transform: rotate(-90deg); margin-left: -3px;}
+.char4 .nn4 { transform: rotate(-120deg); margin-left: -3px;}
+.char5 .nn5 { transform: rotate(-150deg); margin-left: -3px;}
+.char6 .nn6 { transform: rotate(-180deg); margin-left: -3px;}
+.char7 .nn7 { transform: rotate(-210deg); margin-left: -3px;}
+.char8 .nn8 { transform: rotate(-240deg); margin-left: -3px;}
+.char9 .nn9 { transform: rotate(-270deg); margin-left: -3px;}
+.char10 .nn10 { transform: rotate(-300deg); margin-left: -7px;}
+.char11 .nn11 { transform: rotate(-330deg); margin-left: -7px;}
+.char12 .nn12 { transform: rotate(-360deg); margin-left: -7px;}
+
+
+#sekArr span{
+    font: 16px Monaco, MonoSpace;
+    position: absolute;
+    transform-origin: bottom center;
+    color: white;
+    height: 60px;
+    top: -95px;
+    margin-top: 35px;
+}
+
+#sekArr span span {
+    color: white;
+    position: fixed;
+}
