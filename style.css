@@ -4,11 +4,11 @@
     box-sizing: border-box;
     list-style: none;
     text-decoration: none;
+    color: #181A1B;
 }
 
 body {
     background-color: #181A1B;
-    color: white;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -21,9 +21,33 @@ body {
     justify-content: center;
     align-items: center;
     user-select: none;
+    /* background-color: white; */
 }
 
-.wrapper div {
-    padding: 12px 28px;
+.wrapper .hour, .min {
+    font-size: 32px;
+    color: white;
 }
 
+.hour {
+    padding-top: 14px;
+    padding-bottom: 14px;
+    padding-left: 16px;
+    padding-right: 8px;
+}
+.min {
+    padding-top: 14px;
+    padding-bottom: 14px;
+    padding-left: 8px;
+    padding-right: 16px;
+}
+
+.tog {
+    color: white;
+    font-size: 18px;
+}
+
+#tog{
+    width: 10px;
+    text-align: center;
+}

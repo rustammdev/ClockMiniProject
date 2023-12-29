@@ -43,9 +43,16 @@ setInterval(() => {
 
     hourEl.textContent = prependZero(hourInterval)
     minEl.textContent  = prependZero(minInterval)
-    sekEl.textContent  = prependZero(sekInterval++)
+    sekInterval++
+    // sekEl.textContent  = prependZero(sekInterval++)
     
 }, 1000)
+
+
+const dotToggle = document.querySelector('#tog')
+setInterval(() => {
+    dotToggle.classList.toggle('tog')
+}, 1000);
 
 
 
