@@ -17,13 +17,6 @@ let hourInterval = hour
 let minInterval  = min
 let sekInterval  = sek
 
-/* --------------  Rounded  --------------- */
-const minChiziq = document.querySelector('#sekArrow')
-
-minChiziq.style.transform = `rotate(${sekInterval * 6}deg)`
-
-/* ----------------------------- */
-
 /*    day     */
 const day = document.querySelector('#day')
 const month = document.querySelector('#month')
@@ -70,22 +63,18 @@ const sekEl  = document.getElementById('sek')
 
 
 
-console.log(sekInterval);
-
-
 setInterval(() => {
-    minChiziq.style.transform = `rotate(${sekInterval * 6}deg)`
-
+    document.querySelector('#sek').textContent = prependZero(sekInterval)
     if (sekInterval == 60){
         sekInterval++
         minInterval++
         sekInterval = 1
+
     }else{ sekInterval += 1 }
 
     if (minInterval == 60) {
-        if (hourInterval == am_pm && minInterval == 60){
-            hourInterval++
-        }
+        if (hourInterval == am_pm && minInterval == 60)
+        { hourInterval++ } // next hour
         hourInterval++
         minInterval = 0
     }
@@ -104,21 +93,13 @@ setInterval(() => {
 
 
 
-// let b = 0
-// setInterval(() => {
-//     b += 6
-//     minChiziq.style.transform = `rotate(${b}deg)`
-//     console.log(b);   
-// }, 1000);
-
-
-
+/* Sek arrow [ not complate ]
 const sekArr = document.getElementById('sekArr')
 for(let i = 0; i < 60; i++){
     const span = document.createElement('span')
-    const span2 = document.createElement('span')
-    span2.textContent = '-'
-    span.appendChild(span2)
+    const small = document.createElement('small')
+    small.textContent = '-'
+    span.appendChild(small)
     sekArr.appendChild(span)
 }
 
@@ -133,6 +114,6 @@ for(let i = 0; i < 60; i++){
 {
     let rotateArrow = -6
     Array.from(sekArr.children).forEach((span) => {
-        
+        console.log(span);
     })
-}
+} */
