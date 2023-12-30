@@ -89,31 +89,3 @@ setInterval(() => {
     dotToggle.classList.toggle('tog')
 
 }, 1000)
-
-
-
-
-/* Sek arrow [ not complate ]
-const sekArr = document.getElementById('sekArr')
-for(let i = 0; i < 60; i++){
-    const span = document.createElement('span')
-    const small = document.createElement('small')
-    small.textContent = '-'
-    span.appendChild(small)
-    sekArr.appendChild(span)
-}
-
-{
-    let sekundArrow = 0
-    Array.from(sekArr.children).forEach((span) => {
-        span.style.transform = `rotate(${sekundArrow}deg)`
-        sekundArrow += 6
-    })
-}
-
-{
-    let rotateArrow = -6
-    Array.from(sekArr.children).forEach((span) => {
-        console.log(span);
-    })
-} */
